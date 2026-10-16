@@ -328,7 +328,7 @@ function show(s) {
   });
   $("rRemark").textContent = s.remark || "";
   $("rRemarkBox").hidden = !s.remark;
-  const img = "r/" + s.t + ".png"; s.file = "r/" + s.t + ".pdf";
+  const img = s.t + ".png"; s.file = s.t + ".pdf";
   $("sheet").src = img; $("sheet").alt = "Diagnostic report of " + s.name; $("zImg").src = img;
   $("dl").href = s.file;
   $("dl").setAttribute("download", `FGS-Diagnostic-${s.roll}-${s.name.replace(/\W+/g, "-")}.pdf`);
